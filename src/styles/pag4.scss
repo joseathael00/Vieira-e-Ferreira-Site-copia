@@ -1,0 +1,33 @@
+@use "resource/var.scss" as v;
+@use "resource/mixin.scss" as m;
+
+#pag4 {
+  @include m.section;
+  height: 150dvh;
+  background-color: v.$branco;
+  text-align: center;
+
+  .container {
+    height: 95%;
+    width: 90%;
+    justify-content: space-between;
+
+    h2 {
+      color: v.$azulEscuro;
+      padding: 6px;
+    }
+    p {
+      color: v.$cinza;
+    }
+    img {
+      height: 35%;
+      width: 100%;
+    }
+    .botaoEnv {
+      @include m.flexCenter;
+      height: 5%;
+      width: 60%;
+      border-radius: 10px;
+    }
+  }
+}

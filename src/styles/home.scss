@@ -1,9 +1,8 @@
 @use "./resource/mixin.scss" as m;
 
 #home {
-  @include m.flexCenter;
-  @include m.tamTotal;
   @include m.background;
+  @include m.section;
   background-image: url(../assets/background/home-mob.webp);
 
   .container {

@@ -1,13 +1,20 @@
 @use "./var.scss" as v;
 
-@mixin section {
-  @include flexCenter;
-  @include tamTotal;
-  background-color: v.$branco;
-}
-@mixin tamTotal {
+// Tamanho de tela
+@mixin telaTotal {
   height: 100dvh;
   width: 100dvw;
+}
+@mixin tamTotal {
+  height: 100%;
+  width: 100%;
+}
+
+// Definições e posição
+@mixin section {
+  @include flexCenter;
+  @include telaTotal;
+  background-color: v.$branco;
 }
 @mixin flexCenter {
   display: flex;
@@ -19,6 +26,8 @@
   background-size: cover;
   background-position: center;
 }
+
+// Botões
 @mixin animacaoBtn {
   transition: all 0.3s ease-in-out;
   &:hover {

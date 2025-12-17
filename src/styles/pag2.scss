@@ -2,7 +2,6 @@
 @use "resource/mixin.scss" as m;
 
 #pag2 {
-  @include m.flexCenter;
   @include m.section;
   flex-direction: column;
   height: 120dvh;

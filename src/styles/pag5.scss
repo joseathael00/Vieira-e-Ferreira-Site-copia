@@ -1,0 +1,16 @@
+@use "./resource/var.scss" as v;
+@use "./resource/mixin.scss" as m;
+
+#pag4 {
+  @include m.section;
+  height: 150dvh;
+
+  .container {
+    height: 95%;
+    width: 90%;
+
+    h2 {
+      color: v.$azulEscuro;
+    }
+  }
+}

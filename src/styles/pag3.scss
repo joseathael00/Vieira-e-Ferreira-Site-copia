@@ -4,10 +4,12 @@
 #pag3 {
   @include m.section;
   text-align: center;
+
   .container {
     gap: 10%;
-  }
-  h2 {
-    color: v.$azulEscuro;
+
+    #titulo {
+      color: v.$azulEscuro;
+    }
   }
 }

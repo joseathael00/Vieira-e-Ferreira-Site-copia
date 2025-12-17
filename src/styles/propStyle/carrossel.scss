@@ -1,11 +1,58 @@
-#carrossel {
-  display: flex;
-  gap: 4px;
+@use "../resource/mixin.scss" as m;
+@use "../resource/var.scss" as v;
+
+.swiper {
   height: 70%;
   width: 100%;
 
-  img {
-    height: 100%;
-    width: 100%;
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: auto;
+    bottom: 15px;
+    transform: none;
+    height: 0%;
+    width: 0%;
+    color: v.$branco;
+  }
+  .swiper-pagination-bullet {
+    background-color: rgba(19, 32, 73, 0.377);
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background: v.$azulEscuro;
+  }
+  .swiper-slide {
+    position: relative;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sl {
+      @include m.flexCenter;
+      flex-direction: column;
+      text-align: center;
+      position: absolute;
+      inset: 0;
+      backdrop-filter: blur(30px);
+      z-index: 2;
+      padding: 2%;
+
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+      pointer-events: none;
+
+      h2 {
+        color: v.$branco;
+      }
+    }
+
+    &:hover .sl {
+      transform: scaleX(1);
+    }
   }
 }
