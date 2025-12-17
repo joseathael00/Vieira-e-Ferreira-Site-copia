@@ -20,7 +20,7 @@ function Carrossel() {
       navigation
       spaceBetween={10}
       pagination={{ clickable: true }}
-      autoplay={false} // 👈 força desligar
+      autoplay={false}
     >
       <SwiperSlide>
         <img src={img1} alt="Atendimento" />
