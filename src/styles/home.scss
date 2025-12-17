@@ -1,0 +1,16 @@
+@use "./resource/mixin.scss" as m;
+
+#home {
+  @include m.flexCenter;
+  @include m.tamTotal;
+  @include m.background;
+  background-image: url(../assets/background/home-mob.webp);
+
+  .container {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #home .container img {
+    height: 55px;
+  }
+}

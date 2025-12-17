@@ -1,0 +1,36 @@
+@use "./var.scss" as v;
+
+@mixin section {
+  @include flexCenter;
+  @include tamTotal;
+  background-color: v.$branco;
+}
+@mixin tamTotal {
+  height: 100dvh;
+  width: 100dvw;
+}
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@mixin animacaoBtn {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(0.96);
+  }
+}
+@mixin clickInv {
+  &:active,
+  &:hover,
+  &:focus {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    border: 0;
+  }
+}

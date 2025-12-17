@@ -1,0 +1,25 @@
+@use "resource/var.scss" as v;
+@use "resource/mixin.scss" as m;
+
+#pag2 {
+  @include m.flexCenter;
+  @include m.section;
+  flex-direction: column;
+  height: 120dvh;
+  width: 100dvw;
+  text-align: center;
+
+  .container {
+    height: 110dvh;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  h2 {
+    top: 80%;
+    color: v.$azulEscuro;
+  }
+  p {
+    color: v.$cinza;
+  }
+}

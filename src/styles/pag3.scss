@@ -1,0 +1,13 @@
+@use "resource/var.scss" as v;
+@use "resource/mixin.scss" as m;
+
+#pag3 {
+  @include m.section;
+  text-align: center;
+  .container {
+    gap: 10%;
+  }
+  h2 {
+    color: v.$azulEscuro;
+  }
+}

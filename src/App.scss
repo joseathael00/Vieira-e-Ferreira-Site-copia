@@ -1,0 +1,36 @@
+@use "./styles/resource/var.scss" as v;
+@use "./styles/resource/mixin.scss" as m;
+
+.container {
+  @include m.flexCenter;
+  flex-direction: column;
+  height: 94dvh;
+  width: 90dvw;
+}
+.botaoEnv {
+  @include m.flexCenter;
+  background-color: v.$dourado;
+  cursor: pointer;
+  text-align: center;
+  padding: 20px;
+  height: 10%;
+  width: 50%;
+  border-radius: 5px;
+  border: 0;
+  @include m.clickInv;
+  @include m.animacaoBtn;
+}
+.btnContainer {
+  @include m.flexCenter;
+  width: 68%;
+  height: 18%;
+
+  button {
+    @include m.flexCenter;
+    border: 0;
+    width: 28%;
+    background-color: v.$semCor;
+    @include m.clickInv;
+    @include m.animacaoBtn;
+  }
+}

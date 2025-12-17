@@ -1,0 +1,11 @@
+#carrossel {
+  display: flex;
+  gap: 4px;
+  height: 70%;
+  width: 100%;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
